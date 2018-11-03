@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="cordova-test" version="0.0.10" xmlns="http://www.phonegap.com/ns/plugins/1.0">
+
+    <name>cordova test</name>
+    <license>MIT license</license>
+    <description>测试Cordova插件</description>
+    <keywords>cordova</keywords>
+    <repo>https://github.com/niuniuliuliu/cordova-test</repo>
+    <issue>https://github.com/niuniuliuliu/cordova-test/issues</issue>
+
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+
+    <js-module name="testDemo" src="www/test.base.js">
+        <merges target="TestDemo" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="TestDemo">
+                <param name="android-package" value="ck.test.TestDemo" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+        </config-file>
+
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <source-file src="src/android/Test.java"
+            target-dir="src/ck/test" />
+        <!--<source-file src="src/android/libs/alipaySdk-20170725.jar" target-dir="libs" />-->
+    </platform>
+
+</plugin>

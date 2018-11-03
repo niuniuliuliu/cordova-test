@@ -1,0 +1,19 @@
+{
+  "name": "cordova-test",
+  "version": "0.1.0",
+  "description": "cordova test project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niuniuliuliu/cordova-test.git"
+  },
+  "keywords": [
+    "cordova"
+  ],
+  "author": "ck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niuniuliuliu/cordova-test/issues"
+  },
+  "homepage": "https://github.com/niuniuliuliu/cordova-test#readme"
+}
